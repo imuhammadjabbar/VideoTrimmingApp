@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Editor View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="VideoEditorViewController" id="BYZ-38-t0r" customClass="VideoEditorViewController" customModule="VideoTrimmingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lc-t5-XNo" userLabel="viewContent">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUv-Zv-Ln5" userLabel="viewHeader">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Trimming" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5h-h0-gXY">
+                                                <rect key="frame" x="0.0" y="44" width="375" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="PQy-d6-2Od"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="h5h-h0-gXY" secondAttribute="bottom" constant="12" id="1jR-gG-5O5"/>
+                                            <constraint firstItem="h5h-h0-gXY" firstAttribute="leading" secondItem="cUv-Zv-Ln5" secondAttribute="leading" id="8hz-r9-fPN"/>
+                                            <constraint firstAttribute="height" constant="96" id="Q1J-eg-jVo"/>
+                                            <constraint firstAttribute="trailing" secondItem="h5h-h0-gXY" secondAttribute="trailing" id="kz4-mC-01D"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Guk-uD-iEm" userLabel="viewButtons">
+                                        <rect key="frame" x="37.666666666666657" y="306" width="300" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9y-VV-rOv" userLabel="btnBrowseVideo">
+                                                <rect key="frame" x="50" y="27" width="200" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="DFU-86-9tI"/>
+                                                    <constraint firstAttribute="height" constant="50" id="P5S-EG-gcV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <state key="normal" title="Browse Video">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnBrowseVideoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3S-2S-hNO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtP-5D-3f5" userLabel="btnRecordVideo">
+                                                <rect key="frame" x="50" y="123" width="200" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="FMK-wg-cHP"/>
+                                                    <constraint firstAttribute="width" constant="200" id="ip3-Pi-C1Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <state key="normal" title="Record Video">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnRecordVideoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="akw-VV-MBZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="7zc-c5-08K"/>
+                                            <constraint firstItem="dtP-5D-3f5" firstAttribute="centerX" secondItem="Guk-uD-iEm" secondAttribute="centerX" id="Mo3-fl-cgB"/>
+                                            <constraint firstItem="R9y-VV-rOv" firstAttribute="centerX" secondItem="Guk-uD-iEm" secondAttribute="centerX" id="V9V-Di-lsZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="dtP-5D-3f5" secondAttribute="bottom" constant="27" id="WFL-pI-az6"/>
+                                            <constraint firstAttribute="width" constant="300" id="dLm-oC-DLe"/>
+                                            <constraint firstItem="R9y-VV-rOv" firstAttribute="top" secondItem="Guk-uD-iEm" secondAttribute="top" constant="27" id="tPp-ow-iAP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Guk-uD-iEm" firstAttribute="centerX" secondItem="3Lc-t5-XNo" secondAttribute="centerX" id="9Pu-yH-cis"/>
+                                    <constraint firstItem="cUv-Zv-Ln5" firstAttribute="top" secondItem="3Lc-t5-XNo" secondAttribute="top" id="ZVy-ZZ-fXv"/>
+                                    <constraint firstItem="Guk-uD-iEm" firstAttribute="centerY" secondItem="3Lc-t5-XNo" secondAttribute="centerY" id="bCu-VX-9Yw"/>
+                                    <constraint firstAttribute="trailing" secondItem="cUv-Zv-Ln5" secondAttribute="trailing" id="o1n-E5-FoM"/>
+                                    <constraint firstItem="cUv-Zv-Ln5" firstAttribute="leading" secondItem="3Lc-t5-XNo" secondAttribute="leading" id="rBu-gk-iQc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Lc-t5-XNo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="44Q-Nl-rKL"/>
+                            <constraint firstItem="3Lc-t5-XNo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4Xj-wl-CKp"/>
+                            <constraint firstItem="3Lc-t5-XNo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lGx-Da-5uG"/>
+                            <constraint firstAttribute="bottom" secondItem="3Lc-t5-XNo" secondAttribute="bottom" id="ohX-XM-f7u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnBrowseVideo" destination="R9y-VV-rOv" id="dLy-gW-PU0"/>
+                        <outlet property="btnRecordVideo" destination="dtP-5D-3f5" id="HsO-wd-TrI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="115"/>
+        </scene>
+    </scenes>
+</document>
